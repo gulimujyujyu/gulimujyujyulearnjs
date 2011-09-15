@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>String</title>
+</head>
+<body>
+<script language="Javascript" type="text/javascript">
+//0xB0 degree
+var degFahren = prompt("Enter the number");
+var degCent;
+
+degCent = (degFahren-32)*5/9.0;
+document.write(degFahren + "\xB0 Fahrenheit is " + degCent + "\xB0 centigrade" + "<BR>");
+
+//type conversion
+var myString = "50.23 is good.";
+var myInt;
+var myFloat;
+
+document.write(myString + " is " + parseInt(myString) + " as an integer." + "<BR>");
+document.write(myString + " is " + parseFloat(myString) + " as a float number." + "<BR>");
+
+myString = "Cat is good."
+document.write(myString + " is " + parseInt(myString) + " as an integer." + "<BR>");
+document.write(myString + " is " + parseFloat(myString) + " as a float number." + "<BR>");
+
+//NOTE: parseInt recognize Hexadecimal and Octonary number.
+myString = "0x23"
+document.write(myString + " is " + parseInt(myString) + " as an integer." + "<BR>");
+document.write(myString + " is " + parseFloat(myString) + " as a float number." + "<BR>");
+
+myString = "   0.2"
+document.write(myString + " is " + parseInt(myString) + " as an integer." + "<BR>");
+document.write(myString + " is " + parseFloat(myString) + " as a float number." + "<BR>");
+
+myString = "hellow"
+document.write(myString + " is " + parseInt(myString) + " as an integer." + "<BR>");
+document.write("Is it not a number? " + isNaN(parseInt(myString)) + "." + "<BR>")
+document.write(myString + " is " + parseFloat(myString) + " as a float number." + "<BR>");
+</script>
+</body>
+</html>
