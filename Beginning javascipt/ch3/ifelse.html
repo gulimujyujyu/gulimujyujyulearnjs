@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title>If else</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript">
+var degFahren = Number(prompt("Enter the degree Fahrenheit", 32));
+var degCent = 5/9*(degFahren-32);
+
+document.write(degFahren + "\xB0 Fahrenheit is " + degCent + "\xB0 centigrade<BR>");
+
+if(degCent < 0) {
+	document.write("Freezing point of the water.<BR>");
+} else if(degCent >= 100) {
+	document.write("Boiling point of the water.<BR>");
+}
+
+//compare strings
+var myName = "Pau";
+if( myName === "Paul") {
+	alert("myName is Paul");
+}
+
+//switch
+var secretNumber = prompt("Please give me a number:", "");
+secretNumber = parseInt(secretNumber);
+
+if(isNaN(secretNumber)) {
+	document.write("It is not a number!");
+} else {
+	switch(secretNumber) {
+		case 0:
+		case 1:
+		case 2:
+		case 3:
+			document.write("Too low!");
+			break;
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+			document.write("Too high!");
+			break;
+		case 4:
+			document.write("You're right.");
+			break;
+		default:
+			document.write("It contains only one digit");
+			break;
+	}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Loop</title>
+</head>
+<body>
+<script language="javascript" type="text/javascript">
+var degFahren = new Array(1,2,3,4,-23);
+var degCent = new Array();
+var loopCounter;
+for ( loopCounter=0; loopCounter<5; loopCounter++) {
+	degCent[loopCounter] =5/9 * degFahren[loopCounter];
+}
+//for ... in loop
+for ( var lpCounter in degCent) {
+	document.write(degCent[lpCounter] + "\xB0 in centigrade is " + degFahren[lpCounter] + "\xB0 in Fahrenheit.<BR>");
+}
+loopCounter=0;
+while( loopCounter<5) {
+	document.write(degCent[loopCounter] + "\xB0 in centigrade is " + degFahren[loopCounter] + "\xB0 in Fahrenheit.<BR>");
+	loopCounter++;
+}
+</script>
+</body>
+</html>
