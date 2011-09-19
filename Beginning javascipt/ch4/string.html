@@ -1,0 +1,91 @@
+<html>
+<head>
+	<title>String</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript">
+function println(str)
+{
+	document.write(str+"<BR>");
+}
+
+var myString = prompt("Enter some text..", "Hello world!");
+var theLastChar = myString.charAt(myString.length-1);
+var theLastCharValue = myString.charCodeAt(myString.length-1);
+
+println(theLastChar);
+println(theLastCharValue);
+
+//test 
+function checkCharType(str)
+{
+	var returnValue = 'O';
+	var charCode = str.charCodeAt(0);
+	
+	if( charCode >= "A".charCodeAt(0) && charCode <= "Z".charCodeAt(0)) {
+		returnValue = "U";
+	} else if (charCode >= "a".charCodeAt(0) && charCode <= "z".charCodeAt(0)){
+		returnValue = "L";
+	} else if (charCode >= "0".charCodeAt(0) && charCode <= "9".charCodeAt(0)) {
+		returnValue = "N";
+	}
+	return returnValue;
+}
+
+myString = prompt("Enter some text..", "Hello World!");
+switch( checkCharType(myString)) {
+	case "U":
+		println("Upper Case");
+		break;
+	case "L":
+		println("Lower Case");
+		break;
+	case "N":
+		println("Number");
+		break;
+	case "O":
+		println("Others");
+		break;
+}
+
+//text fromCharCode
+var ascii_array = new Array();
+myString = "";
+for( var i=65; i<=90; i++) {
+	ascii_array[i-65] = i;
+	myString = myString + String.fromCharCode(i);
+}
+println(String.fromCharCode(ascii_array)); //not use array as arguement
+println(myString);
+
+//test indexOf(str,pos=0)
+println(myString.indexOf("Cat"));
+
+var yourString = "asdfggfgfgfghjkl";
+var pos = 0;
+var count = 0;
+while( pos != -1) {
+	pos = yourString.indexOf("fg", pos);
+	if(pos != -1) {
+		count ++;
+		pos ++;
+	}
+}
+println(yourString);
+println("fg");
+println(count);
+
+//test substr
+println("subStr");
+println(yourString.substr(1,4));
+println("substring");
+println(yourString.substring(1,4));
+myString = window.location.href;
+println(myString.substr(myString.lastIndexOf("/")+1));
+
+//test tolower/upper
+println(myString.toLowerCase());
+println(myString.toUpperCase());
+</script>
+</body>
+</html>
