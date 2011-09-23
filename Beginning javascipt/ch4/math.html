@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>String</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript">
+function println(str)
+{
+	document.write(str+"<BR>");
+}
+
+var radius = prompt("Radius > ",10);
+var area = (Math.PI)*radius*radius;
+println("The area is "+area);
+
+//abs(), ceil(), floor(), round()
+var myNumber = -101.5;
+println( Math.abs(myNumber));
+println( Math.ceil(myNumber));
+println( Math.floor(myNumber));
+println( Math.round(myNumber));
+println( Math.pow(myNumber,3));
+
+//random()
+var i=0;
+for(i=0; i<10; i++) {
+	println(Math.random());
+}
+
+//fix
+myNumber = 1233124.24324;
+function fix(fixNumber, decimalPlaces) {
+	var div = Math.pow( 10, decimalPlaces);
+	fixNumber = Math.round( fixNumber * div) / div;
+	return fixNumber;
+}
+println( fix(myNumber, 1));
+
+//Number
+//myNumber = new Number(123.1234124123412);
+println(myNumber.toFixed(2));
+</script>
+</body>
+</html>
