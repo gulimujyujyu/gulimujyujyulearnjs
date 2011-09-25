@@ -1,0 +1,64 @@
+<html>
+<head>
+	<script src="../../lib/glm/glm.js"></script>
+	<title>Class</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript">
+function CustomerBooking(bookId, customName, film, showDate)
+{
+	this.customerName = customName;
+	this.bookingId = bookId;
+	this.showDate = showDate;
+	this.film = film;
+}
+
+CustomerBooking.prototype.getCustomerName = function () 
+{
+	return this.customerName;
+}
+
+CustomerBooking.prototype.setCustomerName = function (name)
+{
+	this.customerName = name;
+}
+
+CustomerBooking.prototype.getBookingId = function () 
+{
+	return this.bookingId;
+}
+
+CustomerBooking.prototype.setBookingId = function(id) {
+	this.bookingId = id;
+}
+
+CustomerBooking.prototype.getFilm = function () {
+	return this.film;
+}
+
+CustomerBooking.prototype.setFilm = function (film) {
+	this.film = film;
+}
+
+CustomerBooking.prototype.getShowDate = function ( ){
+	return this.showDate;
+}
+
+CustomerBooking.prototype.setShowDate = function (date) {
+	this.showDate = date;
+}
+
+CustomerBooking.prototype.toString = function () {
+	return this.bookingId+"\t"+this.customerName+"\t";
+}
+
+var firstB = new CustomerBooking(1234, "Smith", "Toy Story", new Date("2011-01-02"));
+
+glm.io.print_date(firstB.showDate);
+glm.io.print_date(firstB.getShowDate());
+glm.io.println(firstB.toString());
+var tm = firstB.setShowDate(new Date("2011-01-01")); // this will return undefined.
+glm.io.println(tm); //this will return firstB
+</script>
+</body>
+</html>

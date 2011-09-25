@@ -1,0 +1,37 @@
+<html>
+<head>
+	<script src="../../lib/glm/glm.js"></script>
+	<title>Array</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript">
+
+
+var names = new Array();
+names[0] = "Paul";
+names[1] = "Catherine";
+names[11] = "Steve"; //actually it goes to names[2]
+
+for(var a in names) {
+	glm.io.println(a);
+	//println(a.index);
+}
+glm.io.println(a.length);
+
+//concat(), slice(), join(), sort(), reverse()
+var ad = new Array("A","B","C");
+var ai = new Array(23,42,23);
+
+var ca = ad.concat(ai);
+glm.io.print_array(ca);
+ad = ca.slice(1,4);
+glm.io.print_array(ad);
+ad = ca.join("&nbsp;");
+glm.io.println(ad);
+ad = ca.sort();
+glm.io.print_array(ad);
+ad = ad.reverse();
+glm.io.print_array(ad);
+</script>
+</body>
+</html>
