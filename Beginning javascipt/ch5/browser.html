@@ -1,0 +1,68 @@
+<html>
+<head>
+	<script src="../../lib/glm/glm.js"></script>
+	<title>window vs. document, BOD vs. DOM</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript">
+console.dir(window);
+console.dir(window.location);
+glm.io.println(window.location.toString());
+console.dir(window.history);
+console.dir(window.navigator);
+console.dir(window.navigator.geolocation);
+console.dir(window.screen);
+console.dir(window.document);
+console.dir(document);
+
+//window obj
+window.defaultStatus = "Hello and Welcome!";
+
+//history obj
+// window.history.go(-1); //go to previous page
+// window.history.back(); // equivalant to go(-1)
+
+//location obj
+// window.location.href = "myPage.html"; //go to page ./myPage.html
+// window.location.href = "../myPage.html"; //go to page ../myPage.html
+// window.location.href = "http://google.com"; //go to google.com
+glm.io.println(window.location.pathname); 
+glm.io.println(window.location.href); 
+glm.io.println(window.location.host); 
+
+//screen obj
+glm.io.println(window.screen.height);
+glm.io.println(window.screen.width);
+glm.io.println(window.screen.colorDepth);
+
+//document obj(DOM)
+glm.io.println(document.bgColor);
+document.bgColor = "orange";
+glm.io.println(document.bgColor);
+
+</script>
+<script type="text/javascript" language="javascript">
+	//event
+	function clickerOnClick()
+	{
+		glm.io.println("You clicked this");
+		return true; //true will go to the new page
+	}
+</script>
+<img name="myImage" src="http://www.google.com.hk/images/srpr/logo3w.png"/>
+<a name="myLink" href="http://google.com">Google</a>
+<a name="clicker" href="#">Click me.</a>
+<script type="text/javascript" language="javascript">
+//images, must after all are loaded.
+console.dir(document.images[0]);
+glm.io.println (document.images["myImage"].src);
+//links
+glm.io.println (document.links["myLink"].href);
+document.links["clicker"].onclick = clickerOnClick;
+
+//navigator obj
+glm.io.println(window.navigator.userAgent);
+glm.io.println(navigator.userAgent.match(/Chrome\/(\d+\.\d+)/));
+</script>
+</body>
+</html>
