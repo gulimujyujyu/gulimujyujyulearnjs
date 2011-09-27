@@ -1,0 +1,41 @@
+<html>
+<head>
+	<script src="../../lib/glm/glm.js"></script>
+	<title></title>
+</head>
+
+
+<body>
+<form name="form">
+	<p>Begin form1</p>
+	<input name="tx1" type="text" />
+	<input name="pw1" type="password" />
+	<input name="cb1" type="checkbox" />
+	<input name="rb1" type="radio"/>
+	<select name="dd1" size=1>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="4">4</option>
+	</select>
+	<select name="ld1" size=4>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="4">4</option>
+	</select>
+	<input name="bt1" type="button">A</input>
+	<input name="sm1" type="submit">A</input>
+	<input name="rs1" type="reset">aa</input>
+	<textarea name="ta1"></textarea>
+	<p>End form1</p>
+</form>
+
+<script type="text/javascript" language="javascript">
+var el = document.forms["form"].elements.length;
+glm.io.println(el);
+for(var ie = 0; ie<el; ie++) {
+	glm.io.println(document.forms["form"].elements[ie].name);
+	glm.io.println(document.forms["form"].elements[ie]);
+}
+</script>
+</body>
+</html>
