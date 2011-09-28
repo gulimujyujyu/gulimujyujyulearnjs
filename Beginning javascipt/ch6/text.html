@@ -1,0 +1,33 @@
+<html>
+<head>
+	<script src="../../lib/glm/glm.js"></script>
+	<title></title>
+	<script type="text/javascript" language="javascript">	
+	var ii=0;
+	//click === mousedown then mouseup
+	function tx1OnChange() { 
+		glm.io.print_to_div("result", "Text Changes.");
+	}
+	function tx1OnBlur() { 
+		glm.io.print_to_div("result", "Text Blur.");
+	}
+	function tx1OnFocus() {
+		glm.io.print_to_div("result", "Text Focus.")
+	}
+	function tx1OnSelect() { 
+		glm.io.print_to_div("result", "Text on Select.");
+	}
+	</script>
+</head>
+
+
+<body>
+<form name="form">
+	<p>Begin form1</p>
+	<input name="tx1" type="text" onchange="tx1OnChange()" onblur="tx1OnBlur()" onfocus="tx1OnFocus()" onselect="tx1OnSelect()"/>
+	<p>End form1</p>
+</form>
+
+<div id=result></div>
+</body>
+</html>

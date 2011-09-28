@@ -1,0 +1,30 @@
+<html>
+<head>
+	<script src="../../lib/glm/glm.js"></script>
+	<title></title>
+	<script type="text/javascript" language="javascript">	
+	var ii=0;
+	//click === mousedown then mouseup
+	function bt1OnClick() { 
+		window.document.forms["form"].bt1.value = ii;
+		ii += 1;
+	}
+	function bt1OnMouseUp() {
+		glm.io.print_to_bt(document.form.bt1,"Mouse Up");
+	}
+	function bt1OnMouseDown() {
+		glm.io.print_to_bt(document.form.bt1,"Mouse down");
+	}
+	</script>
+</head>
+
+
+<body>
+<form name="form">
+	<p>Begin form1</p>
+	<input name="bt1" type="button" value="Button1" onmouseup="bt1OnMouseUp()" onmousedown="bt1OnMouseDown()"/>
+	<p>End form1</p>
+</form>
+
+</body>
+</html>

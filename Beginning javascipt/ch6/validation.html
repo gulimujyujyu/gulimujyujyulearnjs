@@ -1,0 +1,52 @@
+<html>
+<head>
+	<script src="../../lib/glm/glm.js"></script>
+	<title></title>
+	<script type="text/javascript" language="javascript">	
+	var ii=0;
+	//click === mousedown then mouseup
+	function tx1OnChange() { 
+		var name = document.form.tx1;
+		name.value = "Hi! " + name.value;
+		glm.io.print_to_div("result", "Text Changes.");
+	}
+	function tx2OnBlur() {
+		var age = document.form.tx2;
+		if( isNaN(age.value) === true) {
+			age.focus();
+			age.select();
+			glm.io.printdv("Should be a number!");
+		}
+	}
+	function validate() {
+		var fm = document.form;
+		if(fm.tx1.value === "" || fm.tx2.value === "") {
+			if(fm.tx1.value === "") {
+				fm.tx1.focus();
+			} else {
+				fm.tx2.focus();
+			}
+		} else {
+			glm.io.printdv("Pass Validation.");
+			glm.io.printst("Done!");
+		}
+	}
+	</script>
+</head>
+
+
+<body>
+<form name="form">
+	<p>Begin form1</p>
+	<p>tx1</p>
+	<input name="tx1" type="text" onchange="tx1OnChange()"/>
+	<p>age</p>
+	<input name="tx2" type="text" onblur="tx2OnBlur()"/>
+	<p>validation</p>
+	<input name="bt1" type="button" value="validate" onclick="validate()">
+	<p>End form1</p>
+</form>
+
+<div id=result></div>
+</body>
+</html>

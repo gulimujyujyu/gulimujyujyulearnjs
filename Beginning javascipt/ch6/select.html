@@ -1,0 +1,50 @@
+<html>
+<head>
+	<script src="../../lib/glm/glm.js"></script>
+	<title></title>
+	<script type="text/javascript" language="javascript">	
+	var radioIdx = 1;
+	
+	
+	function validate() {
+		var fm = document.form;
+		var opt = "You chose "
+		for( var idx=0, len = fm.length; idx < len; idx ++) {
+			if( fm[idx].type === "checkbox" && fm[idx].checked === true) {
+				opt = opt + fm[idx].value + " ";
+			}
+		}
+		opt = opt + fm.rd[radioIdx].value;
+		glm.io.printdv(opt);
+	}
+	</script>
+</head>
+
+
+<body>
+<form name="form">
+	<p>Begin form1</p>
+	<select name="sl1" size=4>
+		<option value=0>0</option>
+		<option value=1>1</option>
+		<option value=2>2</option>
+		<option value=3>3</option>
+		<option value=4>4</option>
+	</select>
+	<p>End form1</p>
+</form>
+
+<div id=result></div>
+
+<script language="javascript">
+var opt = "";
+var op = document.form.sl1.options;
+//selection contains options array, which has value and text
+for( var idx = 0, len = op.length; idx < len; idx++) {
+	opt = opt + op[idx].text + " " + op[idx].value + ";"
+}
+glm.io.printdv(opt);
+</script>
+
+</body>
+</html>

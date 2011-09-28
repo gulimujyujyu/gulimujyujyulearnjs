@@ -1,0 +1,57 @@
+<html>
+<head>
+	<script src="../../lib/glm/glm.js"></script>
+	<title></title>
+	<script type="text/javascript" language="javascript">	
+	var radioIdx = 1;
+	
+	function rdOnClick(idx) {
+		var returnValue = true;
+		if( idx === 0) {
+			returnValue = false;
+			glm.io.printdv("1.6GHZ is not available.");
+			document.form.rd[radioIdx].checked = true;
+		} else {
+			radioIdx = idx;
+			document.form.rd[radioIdx].checked = true;
+		}
+		return returnValue;
+	}
+	function validate() {
+		var fm = document.form;
+		var opt = "You chose "
+		for( var idx=0, len = fm.length; idx < len; idx ++) {
+			if( fm[idx].type === "checkbox" && fm[idx].checked === true) {
+				opt = opt + fm[idx].value + " ";
+			}
+		}
+		opt = opt + fm.rd[radioIdx].value;
+		glm.io.printdv(opt);
+	}
+	</script>
+</head>
+
+
+<body>
+<form name="form">
+	<p>Begin form1</p>
+	<p>DVD</p>
+	<input name="cb1" type="checkbox" value="DVD"/>
+	<p>CD</p>
+	<input name="cb2" type="checkbox" value="VCD"/>
+	
+	<p>1.6GHz</p>
+	<input name="rd" type="radio" value="1.6GHz" onclick="rdOnClick(0)"/>
+	<p>2.6GHz</p>
+	<input name="rd" type="radio" value="2.6GHz" checked onclick="rdOnClick(1)"/>
+	<p>3.6GHz</p>
+	<input name="rd" type="radio" value="3.6GHz" onclick="rdOnClick(2)"/>
+	
+	<p>validation</p>
+	<input name="bt1" type="button" value="validate" onclick="validate()">
+	<p>End form1</p>
+</form>
+
+<div id=result></div>
+</body>
+</html>
