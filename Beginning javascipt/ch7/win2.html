@@ -1,0 +1,19 @@
+<html>
+<head>
+	<script src="../../lib/glm/glm.js"></script>
+	<title></title>
+	<script type="text/javascript" language="javascript">
+      	  glm.io.println(window.location.href);
+	function openNewWindow(url) {
+		var newWin;
+		newWin = window.open(url,"new window","width=400,height=350,location,menubar");
+	}
+
+	</script>
+</head>
+<body>
+<a href="win1.html" target=myWindow>Open a new Link</a>
+<a href=# onclick="openNewWindow('win2.html')">Open a new window</a>
+<div id="result"></div>
+</body>
+</html>
