@@ -1,0 +1,75 @@
+<html>
+<head>
+<script src="../../lib/glm/glm.js"></script>
+<title></title>
+</head>
+<body>
+
+<div id="result"></div>
+<script type="text/javascript" language="javascript">
+//split
+var str = "A,B,C";
+var astr = str.split(',');
+glm.io.printdv(astr);
+for(var i=0, len = astr.length; i<len; i++) {
+	glm.io.printdv(astr[i]);
+}
+//replace
+str = "This boy is not this boy."
+glm.io.printdv(str);
+var re = /this/ig
+str = str.replace(re,"that");
+glm.io.printdv(str);
+//none
+str = "Paul, paula, Pauline, paul, Paul";
+glm.io.printdv(str);
+re = /Paul/
+str = str.replace(re,"Pingo")
+glm.io.printdv(str);
+//global
+str = "Paul, paula, Pauline, paul, Paul";
+glm.io.printdv(str);
+re = /Paul/g
+str = str.replace(re,"Pingo")
+glm.io.printdv(str);
+//insensitive
+str = "Paul, paula, Pauline, paul, Paul";
+glm.io.printdv(str);
+re = /Paul/ig
+str = str.replace(re,"Pingo")
+glm.io.printdv(str);
+//\b
+str = "Paul, paula, Pauline, paul, Paul";
+glm.io.printdv(str);
+re = /\b/g
+str = str.replace(re,"|")
+glm.io.printdv(str);
+//alpha numeric
+str = "Paul paula Pauline paul Paul";
+glm.io.printdv(str);
+re = /[^a-z\d ]/i
+str = str.replace(re,"^")
+glm.io.printdv(str);
+//test function
+glm.io.printdv(re.test(str))
+//check one word
+str = "Paul, paula, Pauline, paul, Paul";
+glm.io.printdv(str);
+re = /\bPaul\b/ig
+str = str.replace(re,"Pingo")
+glm.io.printdv(str);
+//reusing
+str = "001,002,002,001,003,004,003,001,003,003,006";
+glm.io.printdv(str);
+re = /(\d+),(\d+),\1/ig
+str = str.replace(re,"Pingo")
+glm.io.printdv(str);
+//q1
+str = "This sentence has has a fault and and we need to fix it.";
+glm.io.printdv(str);
+re = /(\b\w+\b) \1/g;
+str = str.replace(re,"$1")
+glm.io.printdv(str);
+</script>
+</body>
+</html>

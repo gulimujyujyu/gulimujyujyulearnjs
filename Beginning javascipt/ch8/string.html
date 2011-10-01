@@ -1,0 +1,57 @@
+<html>
+<head>
+<script src="../../lib/glm/glm.js"></script>
+<title></title>
+</head>
+<body>
+
+<div id="result"></div>
+<textarea id="ta" COLS=30 ROWS=30></textarea>
+<script type="text/javascript" language="javascript">
+//split
+var str = "A,B,C";
+var astr = str.split(',');
+glm.io.printdv(astr);
+for(var i=0, len = astr.length; i<len; i++) {
+	glm.io.printdv(astr[i]);
+}
+//replace
+str = "This boy is not this boy."
+glm.io.printdv(str);
+var re = /this/ig
+str = str.replace(re,"that");
+glm.io.printdv(str);
+//split
+str = "Paul, 0.99, paula, 4.31, Pauline, 2.11, paul, 1.2, Paul, 23";
+glm.io.printdv(str);
+re = /[^a-z]+/i
+astr = str.split(re) //match: [, 0.99, ]
+glm.io.printdv(astr);
+//replace
+str = "'Paul', paula, Pauline, paul, O'Paul'";
+glm.io.printdv(str);
+re = /'\B|\B'/ig
+str = str.replace(re,"^")
+glm.io.printdv(str);
+//non-word boundry
+str = "'Paul', paula, Pauline, paul, O'Paul'";
+glm.io.printdv(str);
+re = /\B/ig
+str = str.replace(re,"^")
+glm.io.printdv(str);
+//search
+str = "'Paul', paula, Pauline, paul, O'Paul'";
+glm.io.printdv(str);
+re = /\B'|'\B/ig
+str = str.search(re,"^"); //return the first place match re
+glm.io.printdv(str);
+//match & join
+str = "<div>lalal<div>lalala</div><div>lalala</div></div>";
+glm.io.printdv(str);
+re = /<[^>\r\n]+>|[^<>\r\n]+/ig;
+str = str.match(re);
+str = str.join("\r\n")
+glm.io.print_to_ta('ta',str);
+</script>
+</body>
+</html>
