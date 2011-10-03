@@ -1,0 +1,28 @@
+<html>
+<head>
+<script src="../../lib/glm/glm.js"></script>
+<title>Date</title>
+<script type="text/javascript" language="javascript">
+var localTime = new Date();
+</script>
+</head>
+<body>
+
+<div id="result"></div>
+<textarea id="ta" COLS=30 ROWS=30></textarea>
+<script type="text/javascript" language="javascript">
+window.setTimeout("glm.io.printdv(\"helloworld!\")", 1000);
+
+var words = ["You are a good man.","I am not.","Yes, it is you!"];
+var gi = 0;
+function changeWord() {
+	glm.io.printdv(words[gi]);
+	gi = (gi+1)%3;
+	//window.setTimeout("changeWord()",3000); //dunt forget the quotation marks here!!!!
+}
+window.setInterval("changeWord()",3000);
+</script>
+
+
+</body>
+</html>

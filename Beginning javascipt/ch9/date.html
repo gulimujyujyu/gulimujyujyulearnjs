@@ -1,0 +1,39 @@
+<html>
+<head>
+<script src="../../lib/glm/glm.js"></script>
+<title>Date</title>
+<script type="text/javascript" language="javascript">
+var localTime = new Date();
+</script>
+</head>
+<body>
+
+<div id="result"></div>
+<textarea id="ta" COLS=30 ROWS=30></textarea>
+<script type="text/javascript" language="javascript">
+glm.io.printdv(localTime.toUTCString());
+glm.io.printdv(localTime.toLocaleString());
+glm.io.printdv(localTime.getTimezoneOffset());
+if(localTime.toLocaleTimeString) {
+	glm.io.printdv(localTime.toLocaleTimeString());
+}
+if(localTime.toLocaleDateString) {
+	glm.io.printdv(localTime.toLocaleDateString());
+}
+if(localTime.toDateString) {
+	glm.io.printdv(localTime.toDateString());
+}
+//glm.io.printdv();
+
+//set UTC datetime
+var dt = new Date();
+dt.setUTCHours(12);
+dt.setUTCMinutes(0);
+dt.setUTCSeconds(0);
+
+glm.io.print_to_ta("ta",dt.toUTCString())
+</script>
+
+
+</body>
+</html>
