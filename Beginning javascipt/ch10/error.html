@@ -1,0 +1,35 @@
+<html>
+<head>
+	<script src="../../lib/glm/glm.js"></script>
+	<title></title>
+	<script type="text/javascript" language="javascript">
+
+	</script>
+</head>
+<body>
+
+<div id="result"></div>
+<textarea id="ta" COLS=30 ROWS=30></textarea>
+<script type="text/javascript" language="javascript">
+try {
+try {
+	glm.io.printdv("Hello world!");
+	glm.io.printdv("Hello world!");//error here
+} catch (exception) {
+	if (exception.description == null) {
+		glm.io.print_to_ta("ta", exception.message);
+	} else {
+		glm.io.print_to_ta("ta", exception.description);
+	}
+	throw "This is the message";
+}
+} catch (error) {
+	if( typeof(error) === "string") {
+		glm.io.print_to_ta("ta", error);
+	}
+} finally {
+	glm.io.print_to_ta("ta", "This is run.");
+}
+</script>
+</body>
+</html>
