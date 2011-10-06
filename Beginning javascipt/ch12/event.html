@@ -1,0 +1,40 @@
+<html>
+<head>
+<script src="../../lib/glm/glm.js"></script>
+<title>Event</title>
+<style>
+.gu1{
+	color:red;
+}
+.gu2{
+	color:blue;
+}
+</style>
+<script type="text/javascript" language="javascript">
+function ahandler(event) {
+	glm.io.printdv(event);
+	var sourceEle = window.event.srcElement;  //ie
+	var eventType = window.event.type;
+	
+	glm.io.printdv(sourceEle.id);
+	glm.io.printdv(eventType);
+	
+	sourceEle = window.event.target; //Firefox
+	eventType = window.event.type;
+	
+	glm.io.printdv(sourceEle.id);
+	glm.io.printdv(eventType);
+	
+	sourceEle.className = "gu2";
+}	
+</script>
+</head>
+<body>
+<a src="#" id="a1" class="gu1" onclick="ahandler(event)">Click</a>
+<div id="result"></div>
+<textarea id="ta" COLS=30 ROWS=30></textarea>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
