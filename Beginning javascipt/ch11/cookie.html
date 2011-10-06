@@ -1,0 +1,27 @@
+<html>
+<head>
+	<script src="../../lib/glm/glm.js"></script>
+	<title></title>
+	<script type="text/javascript" language="javascript">
+	var path = "/";
+	var time = new Date();
+	document.cookie = "Username=Paul;" + "expires=" + time.toGMTString() + ";path=" + path + ";"; 
+	
+	</script>
+</head>
+<body>
+<p>This page just create a cookie.</p>
+<div id="result"></div>
+<textarea id="ta" COLS=30 ROWS=30></textarea>
+<script>
+glm.io.printdv(document.cookie);
+
+//escape function
+var str = "Hello world!!!";
+var estr = escape(str);
+str = unescape(estr);
+glm.io.printdv(estr);
+glm.io.printdv(str);
+</script>
+</body>
+</html>
