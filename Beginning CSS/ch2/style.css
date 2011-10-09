@@ -1,0 +1,10 @@
+h1, h2, h3, h4 {
+	background:#FAB;
+}
+#div_1, #div_2, #div_3, #div_4 {
+	background:rgb(128,128,128);
+	width:auto;
+}
+table {
+	width:auto;
+}
