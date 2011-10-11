@@ -1,0 +1,27 @@
+body {
+	margin:0 auto;
+	background:#000;
+	color:#FFF;
+}
+
+table {
+	margin_bottom:10px;
+	border-spacing:0;
+}
+
+th, td {
+	padding: 0 10px 0 0;
+	text-align: left;
+}
+
+tr {
+	background:none;
+}
+
+tr.even {
+	background:#666;
+}
+
+#h1_1 {
+	padding-left:20px;
+}
