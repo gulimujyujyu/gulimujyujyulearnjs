@@ -1,0 +1,7 @@
+body {
+	background-color:#888;
+	background-image:url(g.png);
+	background-repeat:no-repeat;
+	background-position:bottom right;
+	background-attachment:fixed;
+}
