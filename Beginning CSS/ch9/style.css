@@ -1,0 +1,26 @@
+#h1_1 {
+	float:left;
+	margin:0.5em 1em;
+	padding:0.5em;
+}
+
+#ul_1 {
+	float:right;
+}
+
+li {
+	float:left;
+}
+
+li a{
+	display:block;
+	margin-left:0.5em;
+	padding:0.5em;
+	border:1px solid #ccc;
+	color:#233;
+	text-decoration:none;
+}
+
+#div_1 {
+	clear:both;
+}
