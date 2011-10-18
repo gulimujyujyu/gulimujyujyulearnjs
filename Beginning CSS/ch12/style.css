@@ -1,0 +1,13 @@
+.c1 {
+	background-color:#FAB;
+}
+
+.c2 {
+	background-color:#BAF;
+}
+
+table {
+	width:200px;
+	table-layout:fixed;
+	border-collapse:collapse;
+}
