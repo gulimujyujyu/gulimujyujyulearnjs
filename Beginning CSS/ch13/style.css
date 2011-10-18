@@ -1,0 +1,71 @@
+@font-face {
+	font-family: Raleway;
+	src: url(raleway_thin.eot);
+	src: local(raleway_thin), url(raleway_thin.ttf), url(opentype);
+}
+
+body {
+	background-color:#CCC;
+	font: 82%/1.4 Verdana, Arial, Helvetica, sans-serif;
+}
+
+#cnt {
+	background-color:#FFF;
+	width: 960px;
+	margin: 0 auto;
+	padding: 2em;
+}
+
+h1 {
+	font-family: Raleway, Georgia, Times, Times New Rowan, serif;
+	float: left;
+}
+
+h2,h3 {
+	font-family: Georgia, Times, Times New Rowan, serif;
+}
+
+.nav {
+	float: right;
+}
+
+.nav li {
+	float: left;
+	margin-left:1em;
+}
+
+.nav li a {
+	border:1px solid #CCC;
+	padding:1em;
+	text-decoration:none;
+	display:block;
+}
+
+.intro1 {
+	border-bottom: 3px solid #888;
+	padding-bottom: 1em;
+	clear: both;
+	font-weight:bold;
+	font-style:italic;
+}
+
+.intro2 {
+	clear: both;
+	font-style:italic;
+}
+
+#ins {
+}
+
+#tb {
+	border-left:1px solid #CCC;
+	float:right;
+}
+
+.c1 {
+	background-color:#4C4;
+}
+
+.c2 {
+	background-color:#CCF;
+}
