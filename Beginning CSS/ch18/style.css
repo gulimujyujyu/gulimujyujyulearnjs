@@ -1,0 +1,13 @@
+@media screen and (max-device-width:480px) {
+	body {
+		width:auto;
+		margin:1em;
+	}
+}
+
+@media screen and (max-device-width:480px) and (orientation:portrait){
+	body {
+		width:auto;
+		margin:1em;
+	}
+}
