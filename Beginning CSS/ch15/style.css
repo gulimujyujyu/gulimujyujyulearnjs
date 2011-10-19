@@ -1,0 +1,16 @@
+@media print {
+	body {
+		margin:1em auto;
+	}
+
+	h1 {
+		text-align:center;
+	}
+}
+
+@media all {
+	div {
+		color:#FAB;
+		page-break-after:always;
+	}
+}
