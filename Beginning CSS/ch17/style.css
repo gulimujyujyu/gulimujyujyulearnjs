@@ -1,0 +1,41 @@
+body {
+	width:600px;
+	margin: 1em auto;
+	background-color:#000;
+}
+
+h1 {
+	float:left;
+	background-color:#C00;
+	opacity:0.5;
+}
+
+ul {
+	float:right;
+}
+
+ul li {
+	border:1px dashed #fff;
+	padding:2em;
+	float:left;
+	display:block;
+}
+
+ul li:first-child {
+	background-color:#3C3;
+	opacity:0.3;
+}
+
+ul li:nth-child(2) {
+	background-color:#3C3;
+	opacity:0.5;
+}
+
+ul li:nth-child(3) {
+	background-color:#3C3;
+	opacity:0.7;
+}
+
+ul li:nth-child(4) {
+	visibility:hidden;
+}
