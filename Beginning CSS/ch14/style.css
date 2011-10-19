@@ -1,0 +1,23 @@
+body > #div_1 {
+	background:#ccc;
+}
+
+#h1_1 + #div_1 {
+	color:#FAB;
+}
+
+#h1_1 + #div_2 {
+	color:#FAB;
+}
+
+div[name^="lala"] {
+	color:#FCC;
+}
+
+tbody tr:first-child {
+	color:#0CC;
+}
+
+tbody tr:nth-child(3) {
+	color:#FCC;
+}
