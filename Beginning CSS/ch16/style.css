@@ -1,0 +1,39 @@
+#li_1 a:hover{
+	cursor:crosshair;
+}
+
+#li_2 a:hover{
+	cursor:auto;
+}
+
+#li_3 a:hover{
+	cursor:default;
+}
+
+#li_4 a:hover{
+	cursor:pointer;
+}
+
+#li_5 a:hover{
+	cursor:move;
+}
+
+#li_6 a:hover{
+	cursor:e-resize;
+}
+
+#li_7 a:hover{
+	cursor:text;
+}
+
+#li_8 a:hover{
+	cursor:wait;
+}
+
+#li_9 a:hover{
+	cursor:help;
+}
+
+#li_10 a:hover{
+	cursor:progress;
+}
